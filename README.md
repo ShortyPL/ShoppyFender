@@ -1,15 +1,15 @@
 # ShopyFender
 
-Gra 3D o zarządzaniu sklepem detalicznym i optymalizacji układu — layout, półki, asortyment, stany magazynowe, klienci i kasa.
+A 3D retail management and store-layout optimization game — fixtures, assortment, inventory, customers, and checkout.
 
-> Working title: **ShopyFender** · silnik: **Godot 4.7** · język: **GDScript** · platforma: PC
+> Working title: **ShopyFender** · engine: **Godot 4.7** · language: **GDScript** · platform: PC
 
-## Wymagania
+## Requirements
 
-- [Godot 4.7+](https://godotengine.org/) (projekt celuje w 4.7 / Forward+)
-- opcjonalnie: Node.js (build Godot MCP), Blender + `uvx` (Blender MCP)
+- [Godot 4.7+](https://godotengine.org/) (project targets 4.7 / Forward+)
+- optional: Node.js (Godot MCP build), Blender + `uvx` (Blender MCP)
 
-## Szybki start
+## Quick start
 
 ```bash
 git clone https://github.com/ShortyPL/ShoppyFender.git
@@ -17,41 +17,41 @@ cd ShoppyFender
 godot --editor --path .
 ```
 
-Albo otwórz folder projektu w Godocie (`Project → Import`). Scena startowa: `scenes/ui/MainMenu.tscn`.
+Or open the project folder in Godot (`Project → Import`). Main scene: `scenes/ui/MainMenu.tscn`.
 
-## Testy
+## Tests
 
 ```bash
 godot --headless --path . -s res://tests/run_tests.gd
 ```
 
-Po dodaniu nowych `class_name` lub assetów czasem trzeba najpierw:
+After adding new `class_name` types or assets you may need:
 
 ```bash
 godot --headless --path . --import
 ```
 
-## Struktura projektu
+## Project layout
 
-| Ścieżka | Opis |
+| Path | Description |
 |---|---|
-| `scenes/` | Sceny Godot (UI, sklep, klienci, staff) |
-| `scripts/` | Logika gry (ekonomia, inventory, store, waves…) |
-| `data/` | Dane katalogów (produkty, fixtures) |
-| `assets/` | Modele, tekstury, licencje third-party |
-| `tests/` | Testy headless |
-| `addons/godot_mcp/` | Plugin MCP do edytora |
-| `ShopyFender_package/` | Specyfikacje designu i danych |
-| `docs/` | Decyzje, MCP, plany / design docs |
+| `scenes/` | Godot scenes (UI, store, customers, staff) |
+| `scripts/` | Game logic (economy, inventory, store, waves…) |
+| `data/` | Catalog data (products, fixtures) |
+| `assets/` | Models, textures, third-party licenses |
+| `tests/` | Headless tests |
+| `addons/godot_mcp/` | Editor MCP plugin |
+| `ShopyFender_package/` | Design and data specs |
+| `docs/` | Decisions, MCP notes, plans / design docs |
 
-## Dokumentacja
+## Documentation
 
-Pełny indeks: **[docs/README.md](docs/README.md)**
+Full index: **[docs/README.md](docs/README.md)**
 
-Najważniejsze:
+Highlights:
 
-- [**Instrukcja gry**](docs/INSTRUKCJA.md) — jak grać (sterowanie, HUD, fale)
-- [Master spec](ShopyFender_package/SHOPYFENDER_MASTER_SPEC.md) — źródło prawdy designu
+- [**How to play**](docs/HOW_TO_PLAY.md) — controls, HUD, waves
+- [Master spec](ShopyFender_package/SHOPYFENDER_MASTER_SPEC.md) — design source of truth
 - [Game logic](ShopyFender_package/SHOPYFENDER_GAME_LOGIC.md)
 - [Data model](ShopyFender_package/SHOPYFENDER_DATA_MODEL.md)
 - [Decisions](docs/decisions.md)
@@ -59,19 +59,19 @@ Najważniejsze:
 
 ## MCP (Cursor + Godot / Blender)
 
-Do pracy z agentem w Cursorze:
+For agent-assisted editing in Cursor:
 
 ```bash
 ./tools/setup_mcp.sh
 ```
 
-Potem otwórz projekt w Godocie (plugin **Godot MCP** włączony, port `6505`) i ewentualnie Blender MCP (port `9876`). Szczegóły: [docs/mcp.md](docs/mcp.md).
+Then open the project in Godot (**Godot MCP** plugin enabled, port `6505`) and optionally Blender MCP (port `9876`). Details: [docs/mcp.md](docs/mcp.md).
 
-## Licencja
+## License
 
-- **Kod projektu:** [MIT](LICENSE)
-- **Zewnętrzne assety i narzędzia:** [assets/LICENSES.md](assets/LICENSES.md) (m.in. Kenney / Quaternius CC0, Godot MCP MIT)
+- **Project code:** [MIT](LICENSE)
+- **Third-party assets and tools:** [assets/LICENSES.md](assets/LICENSES.md) (e.g. Kenney / Quaternius CC0, Godot MCP MIT)
 
 ## Status
 
-Hobby / solo. Prototyp playable — priorytet: prostota, data-driven content, fun przed realizmem. Szczegóły w master spec.
+Hobby / solo. Playable prototype — prioritize simplicity, data-driven content, and fun over realism. See the master spec for details.

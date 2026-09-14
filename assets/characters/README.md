@@ -1,43 +1,43 @@
-# Postacie i animacje
+# Characters and animations
 
-Paczki CC0 do klientów i pracownika. Godot importuje głównie folder `ready/`.
+CC0 packs for customers and staff. Godot mainly imports from `ready/`.
 
-## Quaternius — Ultimate Modular Men (główna paczka)
+## Quaternius — Ultimate Modular Men (main pack)
 
-Źródło: https://quaternius.com/packs/ultimatemodularcharacters.html  
-Licencja: CC0.
+Source: https://quaternius.com/packs/ultimatemodularcharacters.html  
+License: CC0.
 
-11 modeli glTF z **24 klipami** w każdym pliku:
+11 glTF models with **24 clips** each:
 
-`Idle`, `Idle_Neutral`, `Walk`, `Run`, `Run_Back`, `Run_Left`, `Run_Right`, `Interact`, `Wave`, plus walka/broń (niepotrzebne w sklepie).
+`Idle`, `Idle_Neutral`, `Walk`, `Run`, `Run_Back`, `Run_Left`, `Run_Right`, `Interact`, `Wave`, plus combat/weapon clips (unused in-store).
 
-Do sklepu najlepiej pasują:
+Best fits for the store:
 
-| Plik | Rola |
+| File | Role |
 | --- | --- |
-| `Casual_Hoodie.gltf` | klient Regular |
-| `Casual_2.gltf` | klient |
-| `Punk.gltf` | klient Impatient |
-| `Suit.gltf` | klient |
-| `Farmer.gltf` | klient |
-| `Worker.gltf` | magazynier |
+| `Casual_Hoodie.gltf` | Regular customer |
+| `Casual_2.gltf` | customer |
+| `Punk.gltf` | Impatient customer |
+| `Suit.gltf` | customer |
+| `Farmer.gltf` | customer |
+| `Worker.gltf` | warehouse worker |
 
 Godot: `assets/characters/ready/quaternius-men/`  
-Archiwum Blender/FBX: `assets/characters/quaternius/modular-men/` (ciężkie foldery mają `.gdignore`).
+Blender/FBX archive: `assets/characters/quaternius/modular-men/` (heavy folders use `.gdignore`).
 
-Women pack (https://quaternius.com/packs/ultimatemodularwomen.html) nie wszedł — Google Drive odrzucił dalsze pobierania. Można spróbować ręcznie później.
+Women pack (https://quaternius.com/packs/ultimatemodularwomen.html) was not imported — Google Drive blocked further downloads. Can retry manually later.
 
 ## Kenney — Animated Characters 1–3
 
-Źródło: Kenney.nl / OpenGameArt. Licencja: CC0.
+Source: Kenney.nl / OpenGameArt. License: CC0.
 
-Jeden rig `characterMedium.fbx`, klipy **idle / jump / run** (brak Walk). 12 skinów PNG, w tym kobiety (`humanFemaleA`, `skaterFemaleA`, `survivorFemaleA`).
+Shared `characterMedium.fbx` rig, clips **idle / jump / run** (no Walk). 12 PNG skins, including women (`humanFemaleA`, `skaterFemaleA`, `survivorFemaleA`).
 
-Rozpakowane: `assets/characters/kenney/pack-1` … `pack-3`.
+Unpacked: `assets/characters/kenney/pack-1` … `pack-3`.
 
-## Nie pobrane automatycznie (itch.io)
+## Not auto-downloaded (itch.io)
 
-Darmowe, CC0, trzeba kliknąć Download na stronie:
+Free CC0; click Download on the site:
 
-- KayKit Adventurers + Character Animations (idle/walk, styl low-poly): https://kaylousberg.itch.io/kaykit-adventurers i https://kaylousberg.itch.io/kaykit-character-animations
-- Quaternius Universal Animation Library (120+ klipów, retarget): https://quaternius.itch.io/universal-animation-library
+- KayKit Adventurers + Character Animations (idle/walk, low-poly): https://kaylousberg.itch.io/kaykit-adventurers and https://kaylousberg.itch.io/kaykit-character-animations
+- Quaternius Universal Animation Library (120+ clips, retarget): https://quaternius.itch.io/universal-animation-library

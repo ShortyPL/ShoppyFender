@@ -203,30 +203,30 @@ theme_override_constants/separation = 12
 
 [node name="HelpTitle" type="Label" parent="HelpPanel/HelpBox"]
 layout_mode = 2
-text = "Jak grać"
+text = "How to play"
 
 [node name="HelpText" type="Label" parent="HelpPanel/HelpBox"]
 layout_mode = 2
 autowrap_mode = 3
-text = "Cel: ustaw półki, przypisz produkty, zamów dostawy i otwórz sklep na falę klientów (start: 10 osób).
+text = "Goal: place shelves, assign products, order deliveries, and open the store for a wave of customers (start: 10).
 
-Budowa
-WASD — kamera   Q/E — obrót widoku
-Scroll — zoom   Środkowy przycisk — pan
-PPM — menu (mebel / SKU / facings / order)
-LPM — postaw ghosta lub wybierz półkę   R — obrót 90°
-Build / Order / Staff / Upgrades — pasek HUD
-More → Open store — start fali
+Build
+WASD — camera   Q/E — rotate view
+Scroll — zoom   Middle mouse — pan
+RMB — menu (fixture / SKU / facings / order)
+LMB — place ghost or select shelf   R — rotate 90°
+Build / Order / Staff / Upgrades — HUD bar
+More → Open store — start the wave
 
-Fala i gwiazdki
-Obsłuż ≥ 8, satysfakcja ≥ 80%, zero utraconych sprzedaży.
-Standardowa dostawa po fali; Express od razu do magazynu.
+Wave and stars
+Serve ≥ 8, satisfaction ≥ 80%, zero lost sales.
+Standard delivery after the wave; Express arrives in the warehouse immediately.
 
-Prędkość
-1 / 2 / 3 — 1× / 2× / 4×   [ ] lub +/- — cykl   Spacja — pauza
+Speed
+1 / 2 / 3 — 1x / 2x / 4x   [ ] or +/- — cycle   Space — pause
 
-Esc — zamknij ten ekran
-Pełna instrukcja: docs/INSTRUKCJA.md"
+Esc — leave this screen
+Full guide: docs/HOW_TO_PLAY.md"
 
 [node name="HelpBack" type="Button" parent="HelpPanel/HelpBox"]
 custom_minimum_size = Vector2(0, 40)

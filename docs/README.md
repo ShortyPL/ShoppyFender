@@ -1,50 +1,50 @@
-# Dokumentacja ShopyFender
+# ShopyFender documentation
 
-Indeks materiałów projektowych. Specyfikacje designu są po angielsku; ten indeks i README repo — po polsku.
+Index of project materials. Design specs and this index are in English.
 
-## Specyfikacje gry (`ShopyFender_package/`)
+## Game specs (`ShopyFender_package/`)
 
-| Dokument | Temat |
+| Document | Topic |
 |---|---|
-| [SHOPYFENDER_MASTER_SPEC.md](../ShopyFender_package/SHOPYFENDER_MASTER_SPEC.md) | Główne źródło prawdy (design + priorytety rozwoju) |
-| [SHOPYFENDER_GAME_LOGIC.md](../ShopyFender_package/SHOPYFENDER_GAME_LOGIC.md) | Logika rozgrywki |
-| [SHOPYFENDER_DATA_MODEL.md](../ShopyFender_package/SHOPYFENDER_DATA_MODEL.md) | Model danych |
-| [SHOPYFENDER_3D_ASSET_LIST.md](../ShopyFender_package/SHOPYFENDER_3D_ASSET_LIST.md) | Lista assetów 3D |
-| [SHOPYFENDER_TEXTURE_SPEC.md](../ShopyFender_package/SHOPYFENDER_TEXTURE_SPEC.md) | Spec tekstur |
-| [SHOPYFENDER_MCP_SETUP.md](../ShopyFender_package/SHOPYFENDER_MCP_SETUP.md) | Setup MCP (pakiet startowy) |
+| [SHOPYFENDER_MASTER_SPEC.md](../ShopyFender_package/SHOPYFENDER_MASTER_SPEC.md) | Design source of truth (priorities + systems) |
+| [SHOPYFENDER_GAME_LOGIC.md](../ShopyFender_package/SHOPYFENDER_GAME_LOGIC.md) | Gameplay logic |
+| [SHOPYFENDER_DATA_MODEL.md](../ShopyFender_package/SHOPYFENDER_DATA_MODEL.md) | Data model |
+| [SHOPYFENDER_3D_ASSET_LIST.md](../ShopyFender_package/SHOPYFENDER_3D_ASSET_LIST.md) | 3D asset list |
+| [SHOPYFENDER_TEXTURE_SPEC.md](../ShopyFender_package/SHOPYFENDER_TEXTURE_SPEC.md) | Texture spec |
+| [SHOPYFENDER_MCP_SETUP.md](../ShopyFender_package/SHOPYFENDER_MCP_SETUP.md) | MCP setup (starter package) |
 
-## Notatki projektu (`docs/`)
+## Project notes (`docs/`)
 
-| Dokument | Temat |
+| Document | Topic |
 |---|---|
-| [INSTRUKCJA.md](INSTRUKCJA.md) | Instrukcja gry dla gracza (sterowanie, HUD, fale) |
-| [decisions.md](decisions.md) | Zaakceptowane decyzje techniczne / produktowe |
-| [mcp.md](mcp.md) | Aktualny stan MCP w tym repo (Godot / Blender / Context7) |
+| [HOW_TO_PLAY.md](HOW_TO_PLAY.md) | Player guide (controls, HUD, waves) |
+| [decisions.md](decisions.md) | Accepted technical / product decisions |
+| [mcp.md](mcp.md) | Current MCP setup in this repo (Godot / Blender / Context7) |
 
-## Plany i designy (superpowers)
+## Plans and designs (superpowers)
 
-Szczegółowe specyfikacje i plany implementacji leżą w:
+Detailed specs and implementation plans live in:
 
 - [`docs/superpowers/specs/`](superpowers/specs/)
 - [`docs/superpowers/plans/`](superpowers/plans/)
 
-Przykłady: menu, HUD, inventory, store pressure, retail balance.
+Examples: menu, HUD, inventory, store pressure, retail balance.
 
-## Licencje i assety
+## Licenses and assets
 
-- Kod: [../LICENSE](../LICENSE) (MIT)
+- Code: [../LICENSE](../LICENSE) (MIT)
 - Third-party: [../assets/LICENSES.md](../assets/LICENSES.md)
-- Postacie: [../assets/characters/README.md](../assets/characters/README.md)
+- Characters: [../assets/characters/README.md](../assets/characters/README.md)
 
-## Szybkie komendy
+## Quick commands
 
 ```bash
-# Edytor
+# Editor
 godot --editor --path .
 
-# Testy
+# Tests
 godot --headless --path . -s res://tests/run_tests.gd
 
-# Godot MCP (serwer + addon)
+# Godot MCP (server + addon)
 ./tools/setup_mcp.sh
 ```
