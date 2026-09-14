@@ -50,6 +50,7 @@ Pełny indeks: **[docs/README.md](docs/README.md)**
 
 Najważniejsze:
 
+- [**Instrukcja gry**](docs/INSTRUKCJA.md) — jak grać (sterowanie, HUD, fale)
 - [Master spec](ShopyFender_package/SHOPYFENDER_MASTER_SPEC.md) — źródło prawdy designu
 - [Game logic](ShopyFender_package/SHOPYFENDER_GAME_LOGIC.md)
 - [Data model](ShopyFender_package/SHOPYFENDER_DATA_MODEL.md)

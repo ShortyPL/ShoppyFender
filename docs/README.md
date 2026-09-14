@@ -17,6 +17,7 @@ Indeks materiałów projektowych. Specyfikacje designu są po angielsku; ten ind
 
 | Dokument | Temat |
 |---|---|
+| [INSTRUKCJA.md](INSTRUKCJA.md) | Instrukcja gry dla gracza (sterowanie, HUD, fale) |
 | [decisions.md](decisions.md) | Zaakceptowane decyzje techniczne / produktowe |
 | [mcp.md](mcp.md) | Aktualny stan MCP w tym repo (Godot / Blender / Context7) |
 
