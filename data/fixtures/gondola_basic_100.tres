@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="FixtureDefinition" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/fixtures/fixture_definition.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://scenes/fixtures/Gondola.tscn" id="2_scene"]
+
+[resource]
+script = ExtResource("1_script")
+id = &"gondola_basic_100"
+display_name = "Basic Gondola 1m"
+fixture_type = &"gondola"
+width_m = 1.0
+depth_m = 0.5
+height_m = 1.8
+purchase_cost = 400.0
+shelf_count = 4
+packed_scene = ExtResource("2_scene")

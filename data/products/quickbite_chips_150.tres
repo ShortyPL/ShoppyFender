@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ProductDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/products/product_definition.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+id = &"quickbite_chips_150"
+display_name = "QuickBite Chips 150 g"
+width_m = 0.12
+height_m = 0.18
+depth_m = 0.05
+purchase_price = 0.7
+selling_price = 1.8
+package_type = &"bag"
+preview_color = Color(0.18, 0.62, 0.28, 1)

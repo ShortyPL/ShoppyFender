@@ -1,0 +1,441 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/hud.gd" id="1_hud"]
+[ext_resource type="Script" path="res://scripts/ui/context_menu.gd" id="2_menu"]
+[ext_resource type="Script" path="res://scripts/ui/order_panel.gd" id="3_order"]
+
+[node name="HUD" type="CanvasLayer"]
+layer = 8
+script = ExtResource("1_hud")
+
+[node name="Root" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="LogoBlock" type="VBoxContainer" parent="Root"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 10.0
+offset_right = 460.0
+offset_bottom = 118.0
+theme_override_constants/separation = 4
+mouse_filter = 2
+
+[node name="LogoRow" type="HBoxContainer" parent="Root/LogoBlock"]
+layout_mode = 2
+theme_override_constants/separation = 6
+mouse_filter = 2
+
+[node name="ShopyLabel" type="Label" parent="Root/LogoBlock/LogoRow"]
+layout_mode = 2
+mouse_filter = 2
+text = "SHOPY"
+
+[node name="FenderLabel" type="Label" parent="Root/LogoBlock/LogoRow"]
+layout_mode = 2
+mouse_filter = 2
+text = "FENDER"
+
+[node name="TaglineRibbon" type="PanelContainer" parent="Root/LogoBlock"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Tagline" type="Label" parent="Root/LogoBlock/TaglineRibbon"]
+layout_mode = 2
+mouse_filter = 2
+text = "Manage your shop. Grow your story."
+
+[node name="WarehousePanel" type="PanelContainer" parent="Root"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 126.0
+offset_right = 460.0
+offset_bottom = 214.0
+mouse_filter = 2
+
+[node name="WarehouseLabel" type="Label" parent="Root/WarehousePanel"]
+layout_mode = 2
+mouse_filter = 2
+autowrap_mode = 3
+text = "Warehouse: —"
+
+[node name="WavePreviewPanel" type="PanelContainer" parent="Root"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 222.0
+offset_right = 460.0
+offset_bottom = 360.0
+mouse_filter = 2
+
+[node name="WavePreviewLabel" type="Label" parent="Root/WavePreviewPanel"]
+layout_mode = 2
+mouse_filter = 2
+autowrap_mode = 3
+text = "Next wave: —"
+
+[node name="StatsRow" type="HBoxContainer" parent="Root"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -760.0
+offset_top = 12.0
+offset_right = -16.0
+offset_bottom = 72.0
+grow_horizontal = 0
+theme_override_constants/separation = 8
+mouse_filter = 2
+
+[node name="CashPill" type="PanelContainer" parent="Root/StatsRow"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="CashLabel" type="Label" parent="Root/StatsRow/CashPill"]
+layout_mode = 2
+mouse_filter = 2
+text = "$100.00"
+
+[node name="DayPill" type="PanelContainer" parent="Root/StatsRow"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="DayBox" type="VBoxContainer" parent="Root/StatsRow/DayPill"]
+layout_mode = 2
+theme_override_constants/separation = 0
+mouse_filter = 2
+
+[node name="DayLabel" type="Label" parent="Root/StatsRow/DayPill/DayBox"]
+layout_mode = 2
+mouse_filter = 2
+text = "Wave 1"
+
+[node name="TimeLabel" type="Label" parent="Root/StatsRow/DayPill/DayBox"]
+layout_mode = 2
+mouse_filter = 2
+text = "9:00 AM"
+
+[node name="RatingPill" type="PanelContainer" parent="Root/StatsRow"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="RatingLabel" type="Label" parent="Root/StatsRow/RatingPill"]
+layout_mode = 2
+mouse_filter = 2
+text = "— (0)"
+
+[node name="LevelPill" type="PanelContainer" parent="Root/StatsRow"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="LevelBox" type="VBoxContainer" parent="Root/StatsRow/LevelPill"]
+layout_mode = 2
+theme_override_constants/separation = 2
+mouse_filter = 2
+
+[node name="LevelLabel" type="Label" parent="Root/StatsRow/LevelPill/LevelBox"]
+layout_mode = 2
+mouse_filter = 2
+text = "Store Level 1"
+
+[node name="XpLabel" type="Label" parent="Root/StatsRow/LevelPill/LevelBox"]
+layout_mode = 2
+mouse_filter = 2
+text = "0 / 600 XP"
+
+[node name="GoalsPanel" type="PanelContainer" parent="Root"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -292.0
+offset_top = 84.0
+offset_right = -16.0
+offset_bottom = 268.0
+grow_horizontal = 0
+mouse_filter = 2
+
+[node name="GoalsBox" type="VBoxContainer" parent="Root/GoalsPanel"]
+layout_mode = 2
+theme_override_constants/separation = 8
+mouse_filter = 2
+
+[node name="GoalsTitle" type="Label" parent="Root/GoalsPanel/GoalsBox"]
+layout_mode = 2
+mouse_filter = 2
+text = "Today's Goals"
+
+[node name="Goal1" type="Label" parent="Root/GoalsPanel/GoalsBox"]
+layout_mode = 2
+mouse_filter = 2
+text = "☐  Stock shelves                  0/1"
+
+[node name="Goal2" type="Label" parent="Root/GoalsPanel/GoalsBox"]
+layout_mode = 2
+mouse_filter = 2
+text = "☐  Serve 10 customers             0/10"
+
+[node name="Goal3" type="Label" parent="Root/GoalsPanel/GoalsBox"]
+layout_mode = 2
+mouse_filter = 2
+text = "☐  Keep shelves full              0/50"
+
+[node name="QueueChip" type="PanelContainer" parent="Root"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -180.0
+offset_top = 280.0
+offset_right = -16.0
+offset_bottom = 328.0
+grow_horizontal = 0
+mouse_filter = 2
+
+[node name="QueueLabel" type="Label" parent="Root/QueueChip"]
+layout_mode = 2
+mouse_filter = 2
+text = "0 in queue"
+
+[node name="ActionBar" type="PanelContainer" parent="Root"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -390.0
+offset_top = -102.0
+offset_right = 390.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ActionBox" type="HBoxContainer" parent="Root/ActionBar"]
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="OrderSlot" type="Control" parent="Root/ActionBar/ActionBox"]
+custom_minimum_size = Vector2(148, 72)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="OrderButton" type="Button" parent="Root/ActionBar/ActionBox/OrderSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Order Stock"
+
+[node name="OrderDot" type="ColorRect" parent="Root/ActionBar/ActionBox/OrderSlot"]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 8.0
+offset_right = 130.0
+offset_bottom = 20.0
+mouse_filter = 2
+color = Color(0.92, 0.18, 0.22, 1)
+
+[node name="BuildButton" type="Button" parent="Root/ActionBar/ActionBox"]
+custom_minimum_size = Vector2(120, 72)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Build"
+
+[node name="StaffButton" type="Button" parent="Root/ActionBar/ActionBox"]
+custom_minimum_size = Vector2(120, 72)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Staff"
+
+[node name="UpgradesButton" type="Button" parent="Root/ActionBar/ActionBox"]
+custom_minimum_size = Vector2(120, 72)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Upgrades"
+
+[node name="MoreButton" type="Button" parent="Root/ActionBar/ActionBox"]
+custom_minimum_size = Vector2(120, 72)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "More"
+
+[node name="ToastLabel" type="Label" parent="Root"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -148.0
+offset_right = 320.0
+offset_bottom = -114.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+horizontal_alignment = 1
+text = ""
+
+[node name="DeliveryPanel" type="PanelContainer" parent="Root"]
+visible = false
+z_index = 4
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -280.0
+offset_top = -196.0
+offset_right = 280.0
+offset_bottom = -150.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="DeliveryBox" type="VBoxContainer" parent="Root/DeliveryPanel"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="DeliveryLabel" type="Label" parent="Root/DeliveryPanel/DeliveryBox"]
+layout_mode = 2
+mouse_filter = 2
+horizontal_alignment = 1
+text = "Delivery"
+
+[node name="DeliveryBar" type="ProgressBar" parent="Root/DeliveryPanel/DeliveryBox"]
+custom_minimum_size = Vector2(0, 14)
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+show_percentage = false
+
+[node name="MoreDimmer" type="ColorRect" parent="Root"]
+visible = false
+z_index = 5
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02, 0.03, 0.04, 0.01)
+
+[node name="MorePopup" type="PanelContainer" parent="Root"]
+visible = false
+z_index = 6
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -280.0
+offset_top = -250.0
+offset_right = -24.0
+offset_bottom = -114.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="MoreBox" type="VBoxContainer" parent="Root/MorePopup"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="OpenButton" type="Button" parent="Root/MorePopup/MoreBox"]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+text = "Open Store"
+
+[node name="ContinueButton" type="Button" parent="Root/MorePopup/MoreBox"]
+visible = false
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+text = "Back to build"
+
+[node name="MenuButton" type="Button" parent="Root/MorePopup/MoreBox"]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+text = "Main Menu"
+
+[node name="ResultsPanel" type="PanelContainer" parent="Root"]
+visible = false
+z_index = 10
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -230.0
+offset_right = 220.0
+offset_bottom = 230.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+
+[node name="ResultsBox" type="VBoxContainer" parent="Root/ResultsPanel"]
+layout_mode = 2
+
+[node name="ResultsLabel" type="Label" parent="Root/ResultsPanel/ResultsBox"]
+layout_mode = 2
+mouse_filter = 2
+horizontal_alignment = 1
+text = "Results"
+
+[node name="ResultsContinueButton" type="Button" parent="Root/ResultsPanel/ResultsBox"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "Continue"
+
+[node name="ResultsNextWaveButton" type="Button" parent="Root/ResultsPanel/ResultsBox"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "Next wave"
+
+[node name="ResultsRepeatButton" type="Button" parent="Root/ResultsPanel/ResultsBox"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "Repeat"
+
+[node name="OrderDimmer" type="ColorRect" parent="Root"]
+visible = false
+z_index = 20
+mouse_filter = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02, 0.03, 0.04, 0.55)
+
+[node name="OrderPanel" type="PanelContainer" parent="Root"]
+visible = false
+z_index = 21
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -180.0
+offset_right = 220.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_order")
+
+[node name="ContextMenu" type="PanelContainer" parent="Root"]
+visible = false
+z_index = 20
+script = ExtResource("2_menu")

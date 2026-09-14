@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="FixtureDefinition" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/fixtures/fixture_definition.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://scenes/fixtures/Gondola.tscn" id="2_scene"]
+
+[resource]
+script = ExtResource("1_script")
+id = &"endcap_basic_80"
+display_name = "Endcap 0.8 m"
+fixture_type = &"endcap"
+width_m = 0.8
+depth_m = 0.6
+height_m = 1.4
+purchase_cost = 250.0
+shelf_count = 2
+packed_scene = ExtResource("2_scene")

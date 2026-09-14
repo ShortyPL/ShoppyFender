@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/customers/customer_controller.gd" id="1_customer"]
+[ext_resource type="Script" path="res://scripts/characters/character_model.gd" id="2_model"]
+
+[sub_resource type="CapsuleMesh" id="MeshBody"]
+radius = 0.32
+height = 1.7
+
+[sub_resource type="StandardMaterial3D" id="MatBody"]
+albedo_color = Color(0.28, 0.46, 0.72, 1)
+
+[sub_resource type="CapsuleShape3D" id="ShapeBody"]
+radius = 0.32
+height = 1.7
+
+[node name="Customer" type="CharacterBody3D"]
+collision_layer = 8
+collision_mask = 1
+script = ExtResource("1_customer")
+
+[node name="Visual" type="MeshInstance3D" parent="."]
+visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
+mesh = SubResource("MeshBody")
+surface_material_override/0 = SubResource("MatBody")
+
+[node name="Model" type="Node3D" parent="."]
+script = ExtResource("2_model")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
+shape = SubResource("ShapeBody")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+path_desired_distance = 0.45
+target_desired_distance = 0.7
+radius = 0.4
+height = 1.7
+avoidance_enabled = false

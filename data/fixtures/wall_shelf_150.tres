@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="FixtureDefinition" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/fixtures/fixture_definition.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://scenes/fixtures/Gondola.tscn" id="2_scene"]
+
+[resource]
+script = ExtResource("1_script")
+id = &"wall_shelf_150"
+display_name = "Wall Shelf 1.5 m"
+fixture_type = &"wall_shelf"
+width_m = 1.5
+depth_m = 0.3
+height_m = 1.6
+purchase_cost = 300.0
+shelf_count = 3
+packed_scene = ExtResource("2_scene")

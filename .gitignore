@@ -1,0 +1,9 @@
+.godot/
+.DS_Store
+**/node_modules/
+.tools/
+.superpowers/
+*.pyc
+__pycache__/
+.venv/
+venv/

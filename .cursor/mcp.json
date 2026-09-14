@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "godot-mcp": {
+      "command": "node",
+      "args": [
+        "${workspaceFolder}/tools/godot-mcp/server/build/index.js"
+      ],
+      "env": {
+        "GODOT_MCP_PORT": "6505"
+      }
+    },
+    "blender": {
+      "command": "/opt/homebrew/bin/uvx",
+      "args": ["--python", "3.11", "blender-mcp"],
+      "env": {
+        "BLENDER_PORT": "9876",
+        "UV_PYTHON_PREFERENCE": "only-managed"
+      }
+    }
+  }
+}

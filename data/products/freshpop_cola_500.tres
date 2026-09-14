@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ProductDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/products/product_definition.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+id = &"freshpop_cola_500"
+display_name = "FreshPop Cola 500 ml"
+width_m = 0.065
+height_m = 0.22
+depth_m = 0.065
+purchase_price = 1.2
+selling_price = 2.5
+package_type = &"bottle_small"
+preview_color = Color(0.78, 0.12, 0.16, 1)

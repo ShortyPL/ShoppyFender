@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/fixtures/fixture_node.gd" id="1_fixture"]
+
+[sub_resource type="BoxShape3D" id="ShapeGondola"]
+size = Vector3(1, 1.8, 0.5)
+
+[sub_resource type="CylinderMesh" id="MeshCola"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 0.22
+
+[sub_resource type="StandardMaterial3D" id="MatCola"]
+albedo_color = Color(0.78, 0.12, 0.16, 1)
+
+[node name="Gondola" type="StaticBody3D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_fixture")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("ShapeGondola")
+
+[node name="VisualRoot" type="Node3D" parent="."]
+
+[node name="ProductVisual" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, -0.08)
+mesh = SubResource("MeshCola")
+surface_material_override/0 = SubResource("MatCola")
+visible = false

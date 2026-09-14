@@ -1,0 +1,21 @@
+---
+description: ShoppyFender MCP policy — when and how to use Godot, Blender, and Context7
+alwaysApply: true
+---
+
+# MCP POLICY — ShoppyFender
+
+Project root is always `/Volumes/TimeData/Cursor/ShoppyFender`. Do not use `~/Developer/ShopyFender`.
+
+1. Use Godot MCP for inspecting, running and modifying Godot scenes when it provides a clear advantage over direct file editing.
+2. Use Blender MCP only for 3D modeling, materials, scene inspection and asset-generation tasks.
+3. Use Context7 when implementing version-sensitive Godot APIs or external library APIs.
+4. Prefer local Git commands for commits, diffs, branches, push and pull.
+5. Use GitHub MCP only for GitHub-specific remote operations such as issues, pull requests and repository metadata. Do not treat it as required.
+6. Do not install new MCP servers without explicit approval.
+7. Do not call paid generation services automatically (Higgsfield, Hyper3D, Hunyuan3D, and similar credit APIs).
+8. Never expose access tokens in source files, prompts or logs.
+9. Never perform destructive GitHub operations without explicit approval.
+10. Keep all game runtime code independent from MCP.
+
+Godot MCP requires the Godot editor open on this project with the Godot MCP plugin enabled (port 6505). Blender MCP requires the Blender addon enabled and **Start MCP Server** clicked in the viewport N-panel (port 9876).

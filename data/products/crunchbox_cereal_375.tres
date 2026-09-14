@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ProductDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/products/product_definition.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+id = &"crunchbox_cereal_375"
+display_name = "CrunchBox Cereal 375 g"
+width_m = 0.16
+height_m = 0.24
+depth_m = 0.06
+purchase_price = 1.8
+selling_price = 3.5
+package_type = &"box_small"
+preview_color = Color(0.92, 0.78, 0.22, 1)

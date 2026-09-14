@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ProductDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/products/product_definition.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+id = &"sunnyjuice_orange_330"
+display_name = "SunnyJuice Orange 330 ml"
+width_m = 0.07
+height_m = 0.18
+depth_m = 0.07
+purchase_price = 0.9
+selling_price = 2.2
+package_type = &"carton"
+preview_color = Color(0.95, 0.55, 0.12, 1)
